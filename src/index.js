@@ -48,7 +48,7 @@ Interpreter.prototype.parseField = (field, fieldName) => {
         if (field._whitelist.list.size) {
             items = field._whitelist.list.values().map(value => Interpreter.prototype.parseField(value));
         } else if (field.innerType) {
-            items = Interpreter.prototype.parseField(object_field.innerType)
+            items = Interpreter.prototype.parseField(field.innerType)
         }
         schema = {type: "array", items: items};
     } else if (type === "object") schema = Interpreter.prototype.parse_object_field(field);
