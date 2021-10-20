@@ -172,7 +172,7 @@ Interpreter.prototype.parse_schema = yup_schema => {
     return openAPI_definition
 }
 
-Interpreter.prototype.createResponseObject = (responseDescription, responseNumber, bodyProperties) => {
+createResponseObject = (responseDescription, responseNumber, bodyProperties) => {
     return {
         description: responseDescription,
         content: {
@@ -197,4 +197,4 @@ Interpreter.prototype.createResponseObject = (responseDescription, responseNumbe
     };
 };
 
-module.exports = {Interpreter}
+module.exports = {Interpreter, createResponseObject}
