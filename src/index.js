@@ -146,7 +146,7 @@ Interpreter.prototype.parse_schema = yup_schema => {
                             message: {type: "string", example: "error"},
                             errors: {
                                 type: "array",
-                                items: {oneOf: [{type: "string"}]},
+                                items: {type: "string"},
                                 example: errors
                             },
                         }
